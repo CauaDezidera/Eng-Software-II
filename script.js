@@ -1,9 +1,7 @@
-// Função para redirecionar para a página de login com o parâmetro apropriado
 function redirectToLogin(userType) {
     window.location.href = `login.html?user=${userType}`;
 }
 
-// Adiciona event listeners aos botões da página inicial
 document.addEventListener('DOMContentLoaded', function() {
     const professorButton = document.getElementById('professor-button');
     const alunoButton = document.getElementById('aluno-button');
@@ -18,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Personaliza a saudação na página de login com base no parâmetro da URL
     const urlParams = new URLSearchParams(window.location.search);
     const userType = urlParams.get('user');
     const greetingElement = document.getElementById('greeting');
@@ -31,20 +28,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Adiciona event listener ao formulário de login
     const loginForm = document.getElementById('login-form');
     if (loginForm) {
         loginForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Previne o envio do formulário
+            event.preventDefault(); 
 
-            // Pegue os valores dos campos de entrada
             const name = document.getElementById('name').value;
-            const password = document.getElementById('password').value;
+            const password = document.getElementById('password').value
 
-            // Simula a lógica de autenticação
-            if (name === 'user' && password === 'password') {
+            if (name === 'cauadezidera' && password === 'cauadezidera1') {
                 alert('Login bem-sucedido!');
-                // Redireciona para a página de perfil
+                
                 window.location.href = 'profile.html';
             } else {
                 alert('Nome ou senha incorretos.');
@@ -52,12 +46,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Função para alternar a seleção de interesses
     const toggleInterest = (button) => {
         button.classList.toggle('selected');
     };
 
-    // Adiciona event listeners aos botões de interesses
     const interestButtons = document.querySelectorAll('.interest');
     interestButtons.forEach(button => {
         button.addEventListener('click', function() {
