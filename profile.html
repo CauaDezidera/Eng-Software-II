@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="profile-container">
+        <button class="back-button" onclick="history.back();">&larr;</button>
+        <h2>Usuário 1</h2>
+        <div class="profile-pic">
+            <img src="Captura de tela 2024-06-12 084544.png" alt="Usuário">
+        </div>
+        <h3>Interesses:</h3>
+        <div class="interests-container">
+            <button class="interest" onclick="toggleInterest(this)">Matemática</button>
+            <button class="interest" onclick="toggleInterest(this)">Ciências</button>
+            <button class="interest" onclick="toggleInterest(this)">Inglês</button>
+            <button class="interest" onclick="toggleInterest(this)">Biologia</button>
+            <button class="interest" onclick="toggleInterest(this)">Química</button>
+            <button class="interest" onclick="toggleInterest(this)">Física</button>
+            <button class="interest" onclick="toggleInterest(this)">Geografia</button>
+            <button class="interest" onclick="toggleInterest(this)">Português</button>
+            <button class="interest" onclick="toggleInterest(this)">Filosofia</button>
+            <button class="interest" onclick="toggleInterest(this)">Sociologia</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
